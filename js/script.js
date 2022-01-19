@@ -13,26 +13,35 @@ const container = document.getElementById('container');
 
 //!Creare un oggetto con proprietà nome, cognome e età.
 // Ho un object con 3 proprietà
-const classe = {
-   student: [
-      {nome: 'Mario', cognome: 'Bros', eta: 20,},
-      {nome: 'Luigi', cognome: 'Bros', eta: 20,},
-      {nome: 'Pinco', cognome: 'Pallo', eta: 75,},
-   ]
-
-};
+const classe = [
+   {
+      nome: 'Mario',
+      cognome: 'Bros', 
+      eta: 20,
+   },
+   {
+      nome: 'Luigi',
+      cognome: 'Bros', 
+      eta: 20,
+   },
+   {
+      nome: 'Pinco', 
+      cognome: 'Pallo', 
+      eta: 75,
+   },
+];
 
 //Stampa in console tutto l'oggetto
-const studentsArray = classe.student;
-console.log(studentsArray);
-console.log(studentsArray[0]);
-console.log(studentsArray[1]);
+console.table(classe);
+console.log(classe[0]);
+console.log(classe[1]);
 
 
 
 
 //!Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 // Per ogni array...
+/*
 for (let i = 0; i < studentsArray.length; i++){
    console.table(studentsArray[i]);
    // Per ogni key in ogni array...
@@ -49,3 +58,4 @@ for (let i = 0; i < studentsArray.length; i++){
       }
    }
 }
+*/
