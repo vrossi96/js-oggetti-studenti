@@ -36,13 +36,33 @@ console.table(classe);
 console.log(classe[0]);
 console.log(classe[1]);
 
+// Chiedo i dati per nome cognome ed età
+const newName = prompt('Inserisci il nome');
+const newLastname = prompt('Inserisci il cognome');
+const newAge = prompt("Inserisci l'età");
+
+// Creo nuovo oggetto da pushare in seguito
+const newUser = {
+   nome: 'nome',
+   cognome: 'cognome', 
+   eta: 'età',
+};
+
+// Riassegno i valori dell'oggetto
+newUser.nome = newName;
+newUser.cognome = newLastname;
+newUser.eta = newAge;
+console.log(newUser);
+
+// Inserisco l'oggetto nell'array
+classe.push(newUser);
 
 
 
 //!Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 // Per ogni array nell array classe
 for (let i = 0; i < classe.length; i++){
-   console.table(classe[i]);
+   //* console.table(classe[i]);
    // Prendo ogni valore nell'array 
    for (let key in classe[i]) {
       if (!(key === 'eta')) {
@@ -56,24 +76,3 @@ for (let i = 0; i < classe.length; i++){
       }
    }
 }
-
-
-
-/*
-for (let i = 0; i < studentsArray.length; i++){
-   console.table(studentsArray[i]);
-   // Per ogni key in ogni array...
-   for (let key in studentsArray[i]){
-      // Stampo solo valori che non hanno la proprietà età
-      if (!(key === 'eta')) {
-         // Ad ogni ciclo viene creato un p
-         let info = document.createElement('p');
-         // Stampa il valore della key nell array (i)
-         let valore = studentsArray[i][key];
-         
-         info.innerText = key + ': ' + valore;
-         container.appendChild(info);
-      }
-   }
-}
-*/
