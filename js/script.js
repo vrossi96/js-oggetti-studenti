@@ -40,8 +40,10 @@ console.log(classe[1]);
 
 
 //!Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
+// Per ogni array nell array classe
 for (let i = 0; i < classe.length; i++){
    console.table(classe[i]);
+   // Prendo ogni valore nell'array 
    for (let key in classe[i]) {
       if (!(key === 'eta')) {
          // Ad ogni ciclo viene creato un p
@@ -56,7 +58,7 @@ for (let i = 0; i < classe.length; i++){
 }
 
 
-// Per ogni array...
+
 /*
 for (let i = 0; i < studentsArray.length; i++){
    console.table(studentsArray[i]);
