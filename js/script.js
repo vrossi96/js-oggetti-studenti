@@ -42,12 +42,12 @@ inputButton.addEventListener('click', function() {
    const newName = inputName.value;
    const newLastname = inputLastname.value;
    const newAge = inputAge.value;
+   // Riassegno i valori dell'oggetto
    newUser.nome = newName;
    newUser.cognome = newLastname;
    newUser.eta = newAge;
-   // Riassegno i valori dell'oggetto
-   console.log(newUser);
    
+   console.log(newUser);
    // Inserisco l'oggetto nell'array
    classe.push(newUser);
    console.table(classe);
