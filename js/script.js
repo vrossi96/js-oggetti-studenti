@@ -31,19 +31,18 @@ console.log(studentsArray[1]);
 
 
 
-
 //!Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 // Per ogni array...
 for (let i = 0; i < studentsArray.length; i++){
+   console.table(studentsArray[i]);
    // Per ogni key in ogni array...
    for (let key in studentsArray[i]){
       // Stampo solo valori che non hanno la proprietà età
       if (!(key === 'eta')) {
          // Ad ogni ciclo viene creato un p
          let info = document.createElement('p');
-         let valore = studentsArray[i][key];
          // Stampa il valore della key nell array (i)
-         console.log(valore);
+         let valore = studentsArray[i][key];
          
          info.innerText = key + ': ' + valore;
          container.appendChild(info);
