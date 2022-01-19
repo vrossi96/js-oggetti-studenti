@@ -31,47 +31,23 @@ console.log(studentsArray[1]);
 
 
 
+
+
+//!Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 // Per ogni array...
 for (let i = 0; i < studentsArray.length; i++){
    // Per ogni key in ogni array...
    for (let key in studentsArray[i]){
-      // Ad ogni ciclo viene creato un p
-      let info = document.createElement('p');
-      let valore = studentsArray[i][key];
-      // Stampa il valore della key nell array (i)
-      console.log(valore);
-
-      info.innerText = key + ': ' + valore;
-      container.appendChild(info);
+      // Stampo solo valori che non hanno la proprietà età
+      if (!(key === 'eta')) {
+         // Ad ogni ciclo viene creato un p
+         let info = document.createElement('p');
+         let valore = studentsArray[i][key];
+         // Stampa il valore della key nell array (i)
+         console.log(valore);
+         
+         info.innerText = key + ': ' + valore;
+         container.appendChild(info);
+      }
    }
 }
-
-//!Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
-/*
-for (let key in classe){
-   for (let i = 0; i < classe[key].length; i++) {
-      console.log('ciao');
-      let info = classe[key][i];
-      console.log(info);
-   }  
-};
-*/
-
-
-
-
-
-
-// Per ogni proprietà in classe
-/*
-for (let key in classe) {
-   // Creo un elemento p
-   let info = document.createElement('p');
-   // Inserisco in p il valore della proprietà di classe
-   info.innerText = key + ': ' + classe[key];
-   console.log(`--Stampa ${key} con il for--`)
-   console.log(classe[key]);
-   // Inserisco nel container il p completo
-   container.appendChild(info);
-}
-*/
