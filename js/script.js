@@ -40,6 +40,22 @@ console.log(classe[1]);
 
 
 //!Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
+for (let i = 0; i < classe.length; i++){
+   console.table(classe[i]);
+   for (let key in classe[i]) {
+      if (!(key === 'eta')) {
+         // Ad ogni ciclo viene creato un p
+         let info = document.createElement('p');
+         // Stampa il valore della key nell array (i)
+         let valore = classe[i][key];
+         
+         info.innerText = key + ': ' + valore;
+         container.appendChild(info);
+      }
+   }
+}
+
+
 // Per ogni array...
 /*
 for (let i = 0; i < studentsArray.length; i++){
