@@ -9,7 +9,6 @@ Usiamo il DOM per stampare e chiedere le informazioni all'utente!
 */
 // Prendo il container
 const container = document.getElementById('container');
-// Creo un elemento vuoto
 
 
 //!Creare un oggetto con proprietà nome, cognome e età.
